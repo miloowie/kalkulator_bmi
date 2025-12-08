@@ -6,6 +6,8 @@ func main() {
 	var bb, tb float64
 	var gender string
 	var bersedia bool
+	var test int
+	fmt.Println(test)
 
 	fmt.Println("Kalkulator BMI")
 	for {

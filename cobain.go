@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	var bb, tb float64
 	var gender string
+	var bersedia bool
 
 	fmt.Println("Kalkulator BMI")
 	for {
@@ -31,6 +32,17 @@ func main() {
 				continue
 			}
 			break
+		}
+
+		for {
+			fmt.Print("Apakah anda bersedia melanjutkan perhitungan BMI? (true / false) :")
+			fmt.Scan(&bersedia)
+
+			if bersedia == true || bersedia == false {
+				break
+			} else if bersedia != true && bersedia != false {
+				fmt.Println("Input tidak valid! Mohon hanya masukkan true atau false")
+			}
 		}
 
 		bmi := bb / ((tb / 100) * (tb / 100))
